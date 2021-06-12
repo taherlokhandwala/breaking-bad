@@ -1,0 +1,21 @@
+{
+  "short_name": "Breaking Bad Characters",
+  "name": "Breaking Bad Characters",
+  "icons": [
+    {
+      "src": "./show-logo.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "./show-logo-mask.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#2C4F31"
+}

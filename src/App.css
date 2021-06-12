@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #132a1d, black);
+}
+.header-logo {
+  text-align: center;
+  padding-top: 30px;
+}
+.header-logo img {
+  height: 150px;
+  width: 250px;
+}
+.characters {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+.flip-card {
+  background: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom, #132a1d, black);
+  color: white;
+  border-top: 1px solid white;
+}
+.flip-card-back hr {
+  border: 0.5px solid white;
+  margin-bottom: 5px;
+}
+.info {
+  padding: 6px;
+}
+.info > p {
+  margin: 15px 0;
+}
+
+.p-span {
+  font-weight: 600;
+  font-style: italic;
+}
+
+#name {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.25rem;
+}
+#occupation {
+  margin: 10px 0;
+}
+
+.search-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#character-name {
+  font-size: 1.1rem;
+  padding: 8px;
+  width: 30%;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+::-ms-input-placeholder {
+  color: white;
+  opacity: 0.8;
+}
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+.message {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.message p {
+  padding: 4px;
+  border-radius: 4px;
+  background: rgb(219, 219, 219);
+  color: #132a1d;
+  font-style: italic;
+  font-weight: 600;
+  display: inline-block;
+}
+.loading {
+  text-align: center;
+}
+
+.loading h2 {
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .characters {
+    width: 95%;
+  }
+  .flip-card {
+    width: 250px;
+    height: 350px;
+  }
+  #character-name {
+    width: 70%;
+  }
+}
